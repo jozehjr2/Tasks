@@ -7,9 +7,11 @@ export default (props) => {
   function getUsersList() {
     return Users.map((user) => {
       return (
-        <li key={user.id}>
-          <strong>ID:</strong> {user.id} | <strong>NOME:</strong> {user.name} |{' '}
-          <strong>EMAIL:</strong> {user.email}
+        <li key={user.id} className="collection-item user-list">
+          <p>
+            <strong>ID:</strong> {user.id} | <strong>NOME:</strong> {user.name}{' '}
+            | <strong>EMAIL:</strong> {user.email}
+          </p>
           <button className="waves-effect waves-light btn-small blue">
             Alterar
           </button>
@@ -34,13 +36,16 @@ export default (props) => {
 
   //Remove um usuário
   function removeUser(id) {
-    //console.log(Users);
+    let index = id != 1 ? id - 1 : 1;
+    Users.splice(index, 1);
+    console.log(Users.length);
   }
 
   return (
     <div className="container">
+      <h3>Usuários</h3>
       <button className="waves-effect waves-light btn-small">Novo</button>
-      <ul>{getUsersList()}</ul>
+      <ul className="collection">{getUsersList()}</ul>
     </div>
   );
 };
