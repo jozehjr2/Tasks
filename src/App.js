@@ -20,7 +20,15 @@ function App() {
           </header>
           <Navbar />
           <Routes />
-        </div>
+        </div>{' '}
+        <footer>
+          <p>
+            <strong>2021. Todos os direitos reservados.</strong>{' '}
+          </p>
+          <p>
+            <em>Desenvolvido por J. Jr.</em>
+          </p>
+        </footer>
       </div>
     </BrowserRouter>
   );

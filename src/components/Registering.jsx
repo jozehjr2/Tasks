@@ -23,17 +23,6 @@ export default (props) => {
     });
   }
 
-  //Adiciona um novo usuário
-  function setUser(newName, newEmail, newPass) {
-    Users.push({
-      id: Users.length + 1,
-      name: newName,
-      email: newEmail,
-      password: newPass,
-    });
-    console.log(Users.length);
-  }
-
   //Remove um usuário
   function removeUser(id) {
     let index = id != 1 ? id - 1 : 1;
