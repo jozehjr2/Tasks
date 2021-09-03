@@ -1,5 +1,14 @@
 import React from 'react';
 import Users from '../data/Users';
+import M from 'materialize-css';
+
+/* document.getElementById('sendNewUser').addEventListener('click', function () {
+  const theName = document.getElementById('name');
+  const theEmail = document.getElementById('email');
+  const thePass = document.getElementById('password');
+  setUser(theName, theEmail, thePass);
+  window.location.href = '/';
+}); */
 
 //Adiciona um novo usuário
 function setUser(newName, newEmail, newPass) {
@@ -13,7 +22,37 @@ function setUser(newName, newEmail, newPass) {
 }
 
 export default (props) => {
-  return {
-    /** Campos para inserção de novo usuário */
-  };
+  return (
+    <div className="row">
+      <h3>Novo Usuário</h3>
+      <form className="col s12 new-user">
+        <input id="name" type="text" className="validate" placeholder="NOME" />
+
+        <input
+          id="email"
+          type="email"
+          className="validate"
+          placeholder="EMAIL"
+        />
+
+        <input
+          id="password"
+          type="password"
+          className="validate"
+          placeholder="SENHA"
+        />
+
+        <br />
+        <br />
+        <button
+          className="btn waves-effect waves-light"
+          type="button"
+          name="action"
+          id="sendNewUser"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  );
 };

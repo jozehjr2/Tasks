@@ -1,6 +1,7 @@
 import React from 'react';
 import Users from '../data/Users';
 import M from 'materialize-css';
+import { NavLink } from 'react-router-dom';
 
 export default (props) => {
   //Retorna uma lista de todos os usuários
@@ -33,7 +34,9 @@ export default (props) => {
   return (
     <div className="container">
       <h3>Usuários</h3>
-      <button className="waves-effect waves-light btn-small">Novo</button>
+      <button className="waves-effect waves-light btn-small">
+        <NavLink to="/newuser">Novo</NavLink>
+      </button>
       <ul className="collection">{getUsersList()}</ul>
     </div>
   );

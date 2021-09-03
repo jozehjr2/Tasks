@@ -3,13 +3,16 @@ import { Switch, Route } from 'react-router-dom';
 
 import Registering from '../components/Registering';
 import ManageTasks from '../components/ManageTasks';
+import NewUser from '../components/NewUser';
 
 export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Registering} />
+
       {/* Página padrão/inicial
       = Cadastro de Usuário */}
+      <Route path="/newuser" exact component={NewUser} />
       <Route path="/managetasks" exact component={ManageTasks} />
     </Switch>
   );
