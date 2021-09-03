@@ -10,7 +10,7 @@ export default (props) => {
     <nav>
       <div className="nav-top-header">
         <a className="waves-effect waves-light btn">
-          <NavLink to="/">Cadastro</NavLink>
+          <NavLink to="/registering">Cadastro</NavLink>
         </a>
         <a className="waves-effect waves-light btn">
           <NavLink to="/managetasks">Tarefas</NavLink>

@@ -51,6 +51,7 @@ export default (props) => {
           id="sendNewUser"
         >
           Enviar
+          <i class="material-icons right">send</i>
         </button>
       </form>
     </div>
