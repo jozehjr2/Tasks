@@ -2,6 +2,8 @@ import React from 'react';
 import Users from '../data/Users';
 import M from 'materialize-css';
 import { NavLink } from 'react-router-dom';
+import RemoveUser from './buttons/RemoveUser';
+import UpdateUser from './buttons/UpdateUser';
 
 export default (props) => {
   //Retorna uma lista de todos os usuários
@@ -13,22 +15,11 @@ export default (props) => {
             <strong>ID:</strong> {user.id} | <strong>NOME:</strong> {user.name}{' '}
             | <strong>EMAIL:</strong> {user.email}
           </p>
-          <button className="waves-effect waves-light btn-small blue">
-            Alterar
-          </button>
-          <button className="waves-effect waves-light btn-small red">
-            Remover
-          </button>
+          <UpdateUser idUser={user.id} />
+          <RemoveUser idUser={user.id} />
         </li>
       );
     });
-  }
-
-  //Remove um usuário
-  function removeUser(id) {
-    let index = id != 1 ? id - 1 : 1;
-    Users.splice(index, 1);
-    console.log(Users.length);
   }
 
   return (
